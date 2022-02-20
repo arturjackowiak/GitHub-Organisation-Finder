@@ -1,0 +1,33 @@
+.data-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: #FFFFFF;
+    cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__info-block {
+        display: flex;
+
+        gap: .5rem;
+        margin: 1rem 0;
+    }
+
+    &__headline {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__label {
+        font-weight: bold;
+    }
+}

@@ -3,22 +3,6 @@
   gap: .5rem;
   justify-content: center;
   
-  &__button {
-    display: block;
-    padding: .5rem 1rem;
-    background: #0000FF;
-    border: 1px solid #0000FF;
-    border-radius: 0.2rem;
-    color: #FFFFFF;
-    transition: 0.5s ease-in-out all;
-    cursor: pointer;
-
-    &:hover, &:focus {
-      background-color: #FFF;
-      color: #0000FF;
-    }
-  }
-
   &__input {
     padding: .5rem 1rem;
     border: 1px solid #333333;
@@ -27,3 +11,4 @@
     background-color: #F3E5AB;
   }
 }
+
