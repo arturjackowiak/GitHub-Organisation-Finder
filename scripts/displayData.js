@@ -1,7 +1,7 @@
 import { Elements } from "./consts.js";
+import { displayModal } from "./displayModal.js";
 
 const displayCompanyInfo = ({ login, description, email, html_url }) => {
-
   Elements.companyInfoElement.innerHTML = `
   <h2 class="data-wrapper__headline">${login ? login : "no data"}</h2>
   <div class="data-wrapper__info-block">
@@ -23,10 +23,29 @@ const displayCompanyInfo = ({ login, description, email, html_url }) => {
   Elements.companyInfoElement.classList.remove("hidden");
 };
 
-const displayRepo = ({ name, description, html_url, id, clone_url, ssh_url, stargazers_count, size } ) => {
+const displayRepo = ({
+  name,
+  description,
+  html_url,
+  id,
+  clone_url,
+  ssh_url,
+  stargazers_count,
+  size,
+}) => {
   const reposElement = document.createElement("div");
   reposElement.id = id;
   reposElement.classList.add("data-wrapper");
+  reposElement.addEventListener("click", () =>
+    displayModal({
+      html_url,
+      clone_url,
+      ssh_url,
+      stargazers_count,
+      size,
+      description,
+    })
+  );
   reposElement.innerHTML = ` 
   <div class="data-wrapper__info-block">
     <span class="data-wrapper__label">Repo:</span> 

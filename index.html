@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link href="index.css" rel="stylesheet">
-      <script type="module" src="./scripts/index.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <script type="module" src="./scripts/index.js"></script>
   </head>
   <body>
-      <h1 class="headline">Github API</h1>
-      <form class="search-form" id="searchForm">
-        <input class="search-form__input" id="searchInput" name="searchInput" placeholder="Organization name..." type="text"/>
-        <button type="submit" class="button">Submit</button>     
-      </form>
-      <p class="error_msg" id="errorMsg"></p>
+    <h1 class="headline">Github API</h1>
+    <form class="search-form" id="searchForm">
+      <input
+        class="search-form__input"
+        id="searchInput"
+        name="searchInput"
+        placeholder="Organization name..."
+        type="text"
+      />
+      <button type="submit" class="button">Submit</button>
+    </form>
+    <p class="error_msg" id="errorMsg"></p>
 
-      <div class="data-wrapper hidden" id="company"></div>
-      <div class="data-wrapper hidden" id="repos">
-      </div>
+    <div class="data-wrapper hidden" id="company"></div>
+    <div class="data-wrapper hidden" id="repos"></div>
+    <div class="modal__container hidden" id="modalContainer"></div>
   </body>
 </html>
